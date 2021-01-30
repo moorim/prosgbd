@@ -1,0 +1,24 @@
+<header>
+   
+    <nav>
+      <a routerLink="./liste" routerLinkActive="active">
+      <img src="assets/list.png" class="icon" />
+      </a>
+      <a routerLink="../add" routerLinkActive="active">
+      <img src="assets/add.png" class="icon" />
+      </a>
+      <a [routerLink]="['../edit', 1]" routerLinkActive="active">
+      <img src="assets/edit.png" class="icon" />
+      </a>
+  </nav>
+  <h1>Liste des sessions de formation </h1>
+</header>
+<section>
+    <app-session-item *ngFor="let sessionItem of sessionItems" [session]="sessionItem"
+                      [ngClass]="{'session-web': sessionItem.name === 'Web', 'session-mobile': sessionItem.name === 'Mobile'}">
+    </app-session-item>
+</section>
+
+
+
+

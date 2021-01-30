@@ -1,0 +1,15 @@
+<nav>
+  <a routerLink="../addformateur" routerLinkActive="active" >add</a>
+  
+</nav>
+<section>
+    <table>
+        <tr>
+            <th>Liste des formateurs</th>
+        </tr>
+        
+            <app-formateur *ngFor = "let form of formateurs" [formateur]="form">  </app-formateur>
+        
+    </table>
+</section>
+
